@@ -19,8 +19,7 @@ class MyApp < Sinatra::Base
 	end
 
 	get '/auth/salesforce/callback' do
-		logger.info "#{env["omniauth.auth"]["extra"]["display_name"]}
-		authenticated"
+		logger.info "#{env["omniauth.auth"]["extra"]["display_name"]} authenticated"
 		env["omniauth.auth"]["extra"]["display_name"]
 	end
 
